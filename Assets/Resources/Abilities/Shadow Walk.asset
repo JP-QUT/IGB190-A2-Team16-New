@@ -20,10 +20,10 @@ MonoBehaviour:
   abilityDescription: Quickly roll towards the targeted location and increase your
     attack speed by 30% for 3 seconds.
   abilityAnimation: Roll
-  range: 8
+  range: 5
   castTime: 0
-  abilityCooldown: 3
-  abilityCost: 0
+  abilityCooldown: 2
+  abilityCost: 10
   movementLock: 0.5
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0

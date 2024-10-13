@@ -2566,6 +2566,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: spawnDensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: empoweredMonsters
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: spawnDensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: empoweredMonsters
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4157343042942318865, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_Name
       value: Room 4
@@ -8146,13 +8162,13 @@ MonoBehaviour:
   resource: 0
   baseDamage: 25
   baseAttacksPerSecond: 1.5
-  baseMaxHealth: 200
+  baseMaxHealth: 150
   baseMaxResource: 200
-  baseMovementSpeed: 3
+  baseMovementSpeed: 2
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 5
   baseResourceRegen: 8
   baseAttackRange: 2
   abilities:
@@ -8175,15 +8191,15 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Mana
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
+  bonusDamagePerLevel: 2
+  bonusHealthPerLevel: 5
   bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
+  bonusResourcePerLevel: 10
   bonusArmorPerLevel: 0
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
-  bonusResourceRegenPerLevel: 0
+  bonusHealthRegenPerLevel: 0.5
+  bonusResourceRegenPerLevel: 1
 --- !u!195 &623941940
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13551,13 +13567,13 @@ MonoBehaviour:
   resource: 0
   baseDamage: 20
   baseAttacksPerSecond: 1.5
-  baseMaxHealth: 200
+  baseMaxHealth: 500
   baseMaxResource: 100
   baseMovementSpeed: 3
-  baseArmor: 0
+  baseArmor: 10
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 10
   baseResourceRegen: 0
   baseAttackRange: 2.5
   abilities:
@@ -13580,14 +13596,14 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
+  bonusDamagePerLevel: 1
+  bonusHealthPerLevel: 20
   bonusMovementSpeedPerLevel: 0
   bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
+  bonusArmorPerLevel: 2
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
+  bonusHealthRegenPerLevel: 1
   bonusResourceRegenPerLevel: 0
 --- !u!195 &1043651115
 NavMeshAgent:
@@ -16255,6 +16271,10 @@ PrefabInstance:
     - target: {fileID: 2530420025797128780, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: spawnDensity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4124517350831407445, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
@@ -26664,13 +26684,13 @@ MonoBehaviour:
   resource: 0
   baseDamage: 20
   baseAttacksPerSecond: 1.8
-  baseMaxHealth: 200
+  baseMaxHealth: 300
   baseMaxResource: 100
-  baseMovementSpeed: 3.5
+  baseMovementSpeed: 4
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 1
   baseResourceRegen: 2
   baseAttackRange: 2
   abilities:
@@ -26693,11 +26713,11 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Energy
   resourceMaterial: {fileID: 2100000, guid: 53e6d10c83e73f74a984d384a27c13d4, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
-  bonusMovementSpeedPerLevel: 0
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
+  bonusDamagePerLevel: 1
+  bonusHealthPerLevel: 10
+  bonusMovementSpeedPerLevel: 0.1
+  bonusResourcePerLevel: 5
+  bonusArmorPerLevel: 1
   bonusCriticalChancePerLevel: 0
   bonusCriticalDamagePerLevel: 0
   bonusHealthRegenPerLevel: 0
@@ -29262,14 +29282,14 @@ MonoBehaviour:
     empoweredMonsterLegendaryDropChance: 0
   _playerExperienceValues:
     baseMonsterXP: 10
-    startingXPPerLevel: 1000
-    additionalMaxXPPerLevel: 0
+    startingXPPerLevel: 100
+    additionalMaxXPPerLevel: 100
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25
   _healthGlobeValues:
-    baseHealthGlobeChance: 0
-    reducedChancePerExistingGlobe: 0
+    baseHealthGlobeChance: 0.4
+    reducedChancePerExistingGlobe: 0.15
     spawnRadius: 6
     lifetime: 5
     healthGlobeHealthRestore: 50
@@ -30165,6 +30185,14 @@ PrefabInstance:
     - target: {fileID: 2530420025797128780, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: spawnDensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: empoweredMonsters
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4124517350831407445, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
@@ -31271,6 +31299,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1883707019183669310, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
+      propertyPath: empoweredMonsters
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
