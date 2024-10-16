@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Decayed Hydra Mail
+  m_Name: Decayed Hydra Mail 1
   m_EditorClassIdentifier: 
   itemName: Decayed Hydra Mail
   itemDescription: '"This stinks..."
@@ -20,27 +20,27 @@ MonoBehaviour:
     legendary beast that has been woven into armour. Wearing this makes you shiver
     in disgust but you feel your wounds closing faster than usual.'
   randomStatCount: 2
-  itemCost: 10000
+  itemCost: 0
   itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
   itemType: 3
   itemRarity: 2
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 824741521
+      scriptUID: 748382514
       hasWait: 0
       eventNodes:
-      - rid: 2915345530357284876
+      - rid: 2915345563525054537
       conditionNodes: []
       actionNodes:
-      - rid: 2915345563525054509
-      - rid: 2915345563525054535
-      - rid: 2915345563525054516
+      - rid: 2915345563525054538
+      - rid: 2915345563525054539
+      - rid: 2915345563525054540
     - scriptName: Item Unequipped
-      scriptUID: 655325541
+      scriptUID: 358507040
       hasWait: 0
       eventNodes:
-      - rid: 2915345530357284877
+      - rid: 2915345563525054541
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2915345530357284876
+    - rid: 2915345563525054537
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -75,7 +75,62 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345530357284877
+    - rid: 2915345563525054538
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsWhileBool
+        functionDescription: Flow/While Loop
+        functionDynamicDescription: Do actions while $
+        functionEvaluators:
+        - rid: 2915345563525054542
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345563525054539
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ seconds
+        functionEvaluators:
+        - rid: 2915345563525054543
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345563525054540
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddHealth
+        functionDescription: Unit/Add Health
+        functionDynamicDescription: Add $ health to $
+        functionEvaluators:
+        - rid: 2915345563525054544
+        - rid: 2915345563525054545
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345563525054541
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -93,25 +148,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345563525054509
-      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DoActionsWhileBool
-        functionDescription: Flow/While Loop
-        functionDynamicDescription: Do actions while $
-        functionEvaluators:
-        - rid: 2915345563525054510
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Loop
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345563525054510
+    - rid: 2915345563525054542
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -120,7 +157,7 @@ MonoBehaviour:
         functionDescription: Player/Player Has Item Equipped
         functionDynamicDescription: Player has $ equipped
         functionEvaluators:
-        - rid: 2915345563525054512
+        - rid: 2915345563525054546
         presetName: 
         variableName: 
         stringSuffix: 
@@ -130,117 +167,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 2915345563525054512
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Item
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345563525054516
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: AddHealth
-        functionDescription: Unit/Add Health
-        functionDynamicDescription: Add $ health to $
-        functionEvaluators:
-        - rid: 2915345563525054517
-        - rid: 2915345563525054518
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345563525054517
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: HealthPercent
-        functionDescription: Unit/Unit Health Percent
-        functionDynamicDescription: $ Health Percent
-        functionEvaluators:
-        - rid: 2915345563525054534
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 20
-    - rid: 2915345563525054518
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345563525054534
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345563525054535
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 2915345563525054536
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345563525054536
+    - rid: 2915345563525054543
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -258,3 +185,76 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.1
+    - rid: 2915345563525054544
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: HealthPercent
+        functionDescription: Unit/Unit Health Percent
+        functionDynamicDescription: $ Health Percent
+        functionEvaluators:
+        - rid: 2915345563525054547
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 20
+    - rid: 2915345563525054545
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345563525054546
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: This Item
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345563525054547
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}

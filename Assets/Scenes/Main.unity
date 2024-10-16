@@ -8166,7 +8166,7 @@ MonoBehaviour:
   baseMaxResource: 200
   baseMovementSpeed: 2
   baseArmor: 0
-  baseCriticalStrikeChance: 0.1
+  baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 5
   baseResourceRegen: 8
@@ -13546,7 +13546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1043651113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13571,7 +13571,7 @@ MonoBehaviour:
   baseMaxResource: 100
   baseMovementSpeed: 3
   baseArmor: 10
-  baseCriticalStrikeChance: 0.1
+  baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 10
   baseResourceRegen: 0
@@ -26663,7 +26663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1806430104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26688,7 +26688,7 @@ MonoBehaviour:
   baseMaxResource: 100
   baseMovementSpeed: 4
   baseArmor: 0
-  baseCriticalStrikeChance: 0.1
+  baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 1
   baseResourceRegen: 2
@@ -29265,10 +29265,10 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 128
   _monsterValues:
-    baseGoldDropAmountMinimum: 10
-    baseGoldDropAmountMaximum: 20
+    baseGoldDropAmountMinimum: 100
+    baseGoldDropAmountMaximum: 200
     goldDropChance: 0.2
-    unempoweredMonsterCommonDropChance: 0
+    unempoweredMonsterCommonDropChance: 0.2
     unempoweredMonsterRareDropChance: 0
     unempoweredMonsterLegendaryDropChance: 0
   _empoweredMonsterValues:
@@ -29278,21 +29278,21 @@ MonoBehaviour:
     empoweredMonsterXPModifier: 5
     empoweredMonsterGoldModifier: 3
     empoweredMonsterCommonDropChance: 1
-    empoweredMonsterRareDropChance: 0.2
-    empoweredMonsterLegendaryDropChance: 0
+    empoweredMonsterRareDropChance: 0.4
+    empoweredMonsterLegendaryDropChance: 0.1
   _playerExperienceValues:
     baseMonsterXP: 10
-    startingXPPerLevel: 100
+    startingXPPerLevel: 50
     additionalMaxXPPerLevel: 100
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25
   _healthGlobeValues:
-    baseHealthGlobeChance: 0.4
+    baseHealthGlobeChance: 0.6
     reducedChancePerExistingGlobe: 0.15
     spawnRadius: 6
     lifetime: 5
-    healthGlobeHealthRestore: 50
+    healthGlobeHealthRestore: 100
   _inventoryValues:
     sellItemReturnRate: 0.25
   _armorValues:

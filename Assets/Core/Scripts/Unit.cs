@@ -103,6 +103,13 @@ public class Unit : Interactable
         amount *= GetBaseDamageTakenModifier();
 
         // Armor currently doesn't do anything? Add logic here.
+        //float armor = stats[Stat.Armor].GetValue();
+        //float constant = 100f; // Choose your value here.
+        //amount = amount * (1 - armor / (armor + constant));
+
+        // Add random variance to damage. (reduced by up to 5%, or increased by up to 5% for a total 10% variance in possible damage)
+        //const float randomFactor = 0.05f;
+        //amount *= (1 + Random.Range(-randomFactor, randomFactor));
 
         // Return the modified amount.
         return amount;

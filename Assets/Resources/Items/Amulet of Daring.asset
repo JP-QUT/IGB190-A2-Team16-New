@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Amulet of Daring
   m_EditorClassIdentifier: 
   itemName: Amulet of Daring
-  itemDescription: 
-  randomStatCount: 0
-  itemCost: 0
+  itemDescription: Wearing this lessens your perception of danger.
+  randomStatCount: 1
+  itemCost: 2000
   itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
   itemType: 1
-  itemRarity: 0
+  itemRarity: 1
   engine:
     scripts:
     - scriptName: Item Equipped
@@ -36,8 +36,36 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
-  randomisableStats: []
+  guaranteedStats:
+  - stat: 0
+    minimum: 0.3
+    maximum: 0.3
+    isPercent: 1
+  - stat: 4
+    minimum: -0.15
+    maximum: -0.15
+    isPercent: 1
+  - stat: 6
+    minimum: 0.3
+    maximum: 0.3
+    isPercent: 1
+  randomisableStats:
+  - stat: 0
+    minimum: 12
+    maximum: 12
+    isPercent: 0
+  - stat: 0
+    minimum: 0.2
+    maximum: 0.3
+    isPercent: 1
+  - stat: 6
+    minimum: 0.2
+    maximum: 0.3
+    isPercent: 1
+  - stat: 3
+    minimum: 0.16
+    maximum: 0.18
+    isPercent: 1
   references:
     version: 2
     RefIds:

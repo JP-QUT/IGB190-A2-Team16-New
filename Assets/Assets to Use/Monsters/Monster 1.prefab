@@ -59,7 +59,7 @@ MonoBehaviour:
   baseAttacksPerSecond: 1
   baseMaxHealth: 100
   baseMaxResource: 100
-  baseMovementSpeed: 0.75
+  baseMovementSpeed: 0.9
   baseArmor: 0
   baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 2

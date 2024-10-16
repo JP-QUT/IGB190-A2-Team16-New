@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Silver Ring
   itemDescription: 
-  randomStatCount: 0
-  itemCost: 0
+  randomStatCount: 1
+  itemCost: 500
   itemIcon: {fileID: 21300000, guid: 70429bf7d5f2bf341be1c31492f4ecd0, type: 3}
   itemType: 0
   itemRarity: 0
@@ -36,8 +36,20 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
-  randomisableStats: []
+  guaranteedStats:
+  - stat: 5
+    minimum: 0.15
+    maximum: 0.2
+    isPercent: 1
+  randomisableStats:
+  - stat: 9
+    minimum: 0.04
+    maximum: 0.04
+    isPercent: 1
+  - stat: 7
+    minimum: 0.06
+    maximum: 0.06
+    isPercent: 1
   references:
     version: 2
     RefIds:
