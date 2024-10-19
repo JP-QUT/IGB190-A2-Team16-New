@@ -79,7 +79,6 @@ public class PlayerWindow : UIWindow
     protected override void Update()
     {
         base.Update();
-        Debug.Log("Updating HUD...");
         UpdatePlayerStats();
         UpdateGoldDisplay();
     }
