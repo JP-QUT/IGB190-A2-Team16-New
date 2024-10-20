@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Decayed Hydra Mail 1
   m_EditorClassIdentifier: 
   itemName: Decayed Hydra Mail
-  itemDescription: '"This stinks..."
+  itemDescription: 'Regenerates 5% max health every second.
 
 
-    The regenerative flesh and organs of a
-    legendary beast that has been woven into armour. Wearing this makes you shiver
-    in disgust but you feel your wounds closing faster than usual.'
+    "This stinks..."
+
+
+    The
+    regenerative flesh and organs of a legendary beast that has been woven into armour.
+    Wearing this makes you shiver in disgust but you feel your wounds closing faster
+    than usual.'
   randomStatCount: 2
   itemCost: 10000
   itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
@@ -31,9 +35,8 @@ MonoBehaviour:
       hasWait: 0
       eventNodes:
       - rid: 2915345630333239343
-      - rid: 2915345630333239318
       conditionNodes:
-      - rid: 2915345630333239319
+      - rid: 2915345630333239370
       actionNodes:
       - rid: 2915345563525054539
       - rid: 2915345563525054540
@@ -225,63 +228,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
-    - rid: 2915345630333239318
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: OnItemEquipped
-        functionDescription: Player/Player equips an item
-        functionDynamicDescription: 'When the player equips an item (Presets: <color=yellow>Triggering
-          Item</color>)'
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Pickup
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Triggering Item
-    - rid: 2915345630333239319
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: PlayerHasItemEquipped
-        functionDescription: Player/Player Has Item Equipped
-        functionDynamicDescription: Player has $ equipped
-        functionEvaluators:
-        - rid: 2915345630333239320
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 2915345630333239320
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Item
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Triggering Item
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
     - rid: 2915345630333239324
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -375,3 +321,40 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
+    - rid: 2915345630333239370
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: PlayerHasItemEquipped
+        functionDescription: Player/Player Has Item Equipped
+        functionDynamicDescription: Player has $ equipped
+        functionEvaluators:
+        - rid: 2915345630333239371
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2915345630333239371
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000}
