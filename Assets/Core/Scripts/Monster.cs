@@ -61,7 +61,7 @@ public class Monster : Unit
         CreateHealthBar();
         ApplySpawnDelay();
         SetInitialFacing();
-        SetOutline(OutlineColor, 3, 0.06f);
+        //SetOutline(OutlineColor, 3, 0.06f);
         if (source != null) source.Play();
     }
 

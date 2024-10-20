@@ -22,6 +22,7 @@ MonoBehaviour:
       conditionNodes:
       - rid: 2915345629546283017
       actionNodes:
+      - rid: 2915345648783458304
       - rid: 2915345629546283094
     - scriptName: SpawnEnemy
       scriptUID: 46293148
@@ -174,7 +175,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -3259,3 +3260,59 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 2915345648783458304
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 2915345648783458306
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345648783458306
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: KeyIsHeld
+        functionDescription: Input/Key is Held
+        functionDynamicDescription: $ is Held
+        functionEvaluators:
+        - rid: 2915345648783458309
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2915345648783458309
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Key
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Alpha1
+        options: []
