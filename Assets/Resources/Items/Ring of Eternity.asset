@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Ring of Eternity
   m_EditorClassIdentifier: 
   itemName: Ring of Eternity
-  itemDescription: 'A beginning, but no end.
+  itemDescription: 'Taking damage increases your armor by 5% for 10 seconds (Stacks
+    up to 10 times)
+
+
+    A beginning, but no end.
 
 
     The ring is in perfect condition.
