@@ -119,13 +119,6 @@ public class Player : Unit
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IEngineHandler damageSource)
     {
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
-
-        // Stealth help
-        const float helpModifier = 1f;
-        const float maxDamageReduction = 0.8f;
-        float healthPerc = health / stats[Stat.MaxHealth].GetValue();
-        amount *= Mathf.Max(Mathf.Pow(healthPerc, helpModifier), 1.0f - maxDamageReduction);
-
     }
 
     /// <summary>
