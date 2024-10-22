@@ -4375,7 +4375,7 @@ GameObject:
   - component: {fileID: 375377295}
   - component: {fileID: 375377294}
   m_Layer: 0
-  m_Name: Player (Dragonfoot Ascendant)
+  m_Name: Player (Dragonist Ascendant)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4396,24 +4396,24 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Dragonfoot Ascendant
+  unitName: Dragonist Ascendant
   health: 500
   resource: 0
   baseDamage: 20
   baseAttacksPerSecond: 2
-  baseMaxHealth: 300
+  baseMaxHealth: 400
   baseMaxResource: 100
   baseMovementSpeed: 4
   baseArmor: 3
   baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 5
+  baseHealthRegen: 2
   baseResourceRegen: 0
   baseAttackRange: 2
   abilities:
-  - {fileID: 11400000, guid: 63a782021e0dcd343a62943c5471ba6c, type: 2}
+  - {fileID: 11400000, guid: 512c391659aaea7499881a21c58de6c0, type: 2}
   - {fileID: 11400000, guid: 439a83325212fdd46bf8dc30aca6abfa, type: 2}
-  - {fileID: 11400000, guid: dcf06f73b05311c469df4ff76bc88947, type: 2}
+  - {fileID: 11400000, guid: 93b146d2df249f3458da36eb17eabf0f, type: 2}
   - {fileID: 11400000, guid: 35711275af7bab445a6a72edb86baf44, type: 2}
   - {fileID: 11400000, guid: 3c20bc3718e7e7a408ecb6c5106105c9, type: 2}
   lastAbilityCast: {fileID: 0}

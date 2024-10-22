@@ -19,19 +19,19 @@ MonoBehaviour:
   targetMode: 3
   abilityDescription: Rapidly kick three times with the power of a dragon, dealing
     33% attack damage each.
-  abilityAnimation: One Hand Slash
+  abilityAnimation: Custom1
   range: 0
   castTime: 0.5
   abilityCooldown: 0.1
-  abilityCost: 0
+  abilityCost: 5
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 1
-  abilityGeneratesResource: 0
-  requiresLineOfSight: 0
-  canUpdateTargetWhileCasting: 1
+  abilityGeneratesResource: 1
+  requiresLineOfSight: 1
+  canUpdateTargetWhileCasting: 0
   castAtClosestPointInRange: 1
   castCompleteSound: {fileID: 0}
   castCompleteSoundVolume: 1
@@ -51,8 +51,11 @@ MonoBehaviour:
           - rid: 2915345696298106881
           conditionNodes: []
           actionNodes:
-          - rid: 2915345696298106888
+          - rid: 2915345696298107233
           - rid: 2915345696298106894
+          - rid: 2915345696298107237
+          - rid: 2915345696298106888
+          - rid: 2915345696298107238
     - rid: 2915345696298106881
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -93,7 +96,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Effect
         allowValue: 1
         allowPreset: 1
@@ -137,17 +140,18 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 769673449038971139, guid: d9dd06d2c400dd043b0e61020e0318f8, type: 3}
+        value: {fileID: 2954705732812704554, guid: b97529a1bf6e00743b4079a552a69288, type: 3}
     - rid: 2915345696298106891
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
         tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Casting Unit
+        functionName: GetGlobalUnitVariable
+        functionDescription: Global Unit Variable
+        functionDynamicDescription: 'Global Unit: $'
+        functionEvaluators:
+        - rid: 2915345696298107400
+        presetName: Target Unit
         variableName: 
         stringSuffix: 
         indent: 0
@@ -173,7 +177,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 0.1
     - rid: 2915345696298106893
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -191,7 +195,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 0.6
     - rid: 2915345696298106894
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -206,7 +210,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -266,7 +270,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 90
+        value: 30
     - rid: 2915345696298106898
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -303,3 +307,148 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 3
+    - rid: 2915345696298107233
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsXTimes
+        functionDescription: Flow/For Loop
+        functionDynamicDescription: Do actions $ times
+        functionEvaluators:
+        - rid: 2915345696298107239
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345696298107237
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ seconds
+        functionEvaluators:
+        - rid: 2915345696298107246
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345696298107238
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Play2DSound
+        functionDescription: Audio/Play Sound
+        functionDynamicDescription: Play $ at $ volume
+        functionEvaluators:
+        - rid: 2915345696298107247
+        - rid: 2915345696298107248
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
+        nodeIcon: Audio
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345696298107239
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
+    - rid: 2915345696298107246
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.1
+    - rid: 2915345696298107247
+      type: {class: AudioNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Audio Clip
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 8300000, guid: 6ec7fd22d2da66b47a34491295305ed2, type: 3}
+    - rid: 2915345696298107248
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 20
+    - rid: 2915345696298107400
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: {fileID: 0}
