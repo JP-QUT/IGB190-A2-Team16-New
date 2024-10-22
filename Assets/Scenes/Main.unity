@@ -4404,12 +4404,12 @@ MonoBehaviour:
   baseMaxHealth: 400
   baseMaxResource: 100
   baseMovementSpeed: 4
-  baseArmor: 3
+  baseArmor: 5
   baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 2
   baseResourceRegen: 0
-  baseAttackRange: 2
+  baseAttackRange: 1.5
   abilities:
   - {fileID: 11400000, guid: 512c391659aaea7499881a21c58de6c0, type: 2}
   - {fileID: 11400000, guid: 439a83325212fdd46bf8dc30aca6abfa, type: 2}
