@@ -64,9 +64,10 @@ MonoBehaviour:
           scriptUID: 580779942
           hasWait: 0
           eventNodes:
-          - rid: 2915345722186137663
+          - rid: 2915345722959200311
           conditionNodes: []
           actionNodes:
+          - rid: 2915345722959200328
           - rid: 2915345722186137622
           - rid: 2915345722186137634
           - rid: 2915345722186137635
@@ -232,7 +233,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -372,7 +373,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
@@ -394,7 +395,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Effect
         allowValue: 1
         allowPreset: 1
@@ -414,7 +415,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 1
+        indent: 2
         nodeIcon: Loop
         allowValue: 1
         allowPreset: 1
@@ -432,7 +433,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 2
+        indent: 3
         nodeIcon: Timer
         allowValue: 1
         allowPreset: 1
@@ -451,7 +452,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 2
+        indent: 3
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
@@ -768,7 +769,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        indent: 0
+        indent: 1
         nodeIcon: Variable
         allowValue: 1
         allowPreset: 1
@@ -810,31 +811,6 @@ MonoBehaviour:
         allowFunction: 1
         value: Burn
         options: []
-    - rid: 2915345722186137663
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: OnUnitDamaged
-        functionDescription: Unit/Unit is damaged
-        functionDynamicDescription: 'When a unit is damaged (Presets: <color=yellow>Damaged
-          Unit</color>, <color=yellow>Damaging Unit</color>, <color=yellow>Damaging
-          Ability</color>, <color=yellow>Damage Dealt</color>, <color=yellow>Is Critical</color>)'
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Event
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Damaged Unit
-        - Damaging Unit
-        - Damaging Ability
-        - Damage Dealt
-        - Is Critical
     - rid: 2915345722186137702
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1178,6 +1154,123 @@ MonoBehaviour:
         allowFunction: 1
         value: 4
     - rid: 2915345722959200308
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345722959200311
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitFinishesCastingThisAbility
+        functionDescription: Ability/When a unit finishes casting this ability
+        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
+          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
+          <color=yellow>Target Unit</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Casting Unit
+        - Ability Target Location
+        - Target Unit
+    - rid: 2915345722959200328
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ForEachUnitInGroup
+        functionDescription: Flow/For Each Unit in Unit Group
+        functionDynamicDescription: 'For Each Unit in $ (Variable Storing Current
+          Unit: $)'
+        functionEvaluators:
+        - rid: 2915345722959200329
+        - rid: 2915345722959200330
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Loop
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345722959200329
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfUnit2
+        functionDescription: All Enemies Near Unit
+        functionDynamicDescription: All enemies within $ of $
+        functionEvaluators:
+        - rid: 2915345722959200363
+        - rid: 2915345722959200364
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345722959200330
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Unit
+        options: []
+    - rid: 2915345722959200363
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4
+    - rid: 2915345722959200364
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
