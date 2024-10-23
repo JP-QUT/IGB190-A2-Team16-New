@@ -15,10 +15,10 @@ MonoBehaviour:
   engine:
     rid: 2915345696298106880
   abilityName: Dragon Kick
-  abilityIcon: {fileID: 21300000, guid: 7952f6ff49298fd44a3cf9954c4102cf, type: 3}
+  abilityIcon: {fileID: 21300000, guid: 6bbc2b4aaf7c27247b5f84fef8b72332, type: 3}
   targetMode: 3
-  abilityDescription: Rapidly kick three times with the power of a dragon, dealing
-    33% attack damage each.
+  abilityDescription: Kick with the power of a dragon hitting enemies two times each,
+    dealing a total of 70% attack damage to all units in front of the caster.
   abilityAnimation: Custom1
   range: 0
   castTime: 0.5
@@ -334,12 +334,14 @@ MonoBehaviour:
     - rid: 2915345699733241899
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 2
         tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: Division
+        functionDescription: Math/Division
+        functionDynamicDescription: $ / $
+        functionEvaluators:
+        - rid: 2915345717653930067
+        - rid: 2915345717653930068
         presetName: 
         variableName: 
         stringSuffix: '%'
@@ -348,7 +350,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 33
+        value: 1
     - rid: 2915345699733241900
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -422,7 +424,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.1
+        value: 0.03
     - rid: 2915345699733242220
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -479,7 +481,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 2
     - rid: 2915345699733242241
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -669,3 +671,58 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 3
+    - rid: 2915345717653930067
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: UnitHealth
+        functionDescription: Unit/Unit Health
+        functionDynamicDescription: $ Health
+        functionEvaluators:
+        - rid: 2915345717653930111
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 70
+    - rid: 2915345717653930068
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
+    - rid: 2915345717653930111
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}

@@ -4412,9 +4412,9 @@ MonoBehaviour:
   baseAttackRange: 1.5
   abilities:
   - {fileID: 11400000, guid: 512c391659aaea7499881a21c58de6c0, type: 2}
-  - {fileID: 11400000, guid: 439a83325212fdd46bf8dc30aca6abfa, type: 2}
+  - {fileID: 11400000, guid: 4e9d2a7cd6952d84f9d8d77de87db60c, type: 2}
   - {fileID: 11400000, guid: 93b146d2df249f3458da36eb17eabf0f, type: 2}
-  - {fileID: 11400000, guid: 35711275af7bab445a6a72edb86baf44, type: 2}
+  - {fileID: 11400000, guid: 28365ef7ab7460542aef9bc99743bb4f, type: 2}
   - {fileID: 11400000, guid: 3c20bc3718e7e7a408ecb6c5106105c9, type: 2}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 0}
