@@ -15,7 +15,7 @@ MonoBehaviour:
   engine:
     rid: 2915345722186137600
   abilityName: Ancestral Rage
-  abilityIcon: {fileID: 21300000, guid: fe2b8789f60c97a4aacdbab1610e4e51, type: 3}
+  abilityIcon: {fileID: 21300000, guid: 3a404cb369112a140a650331bfb56abf, type: 3}
   targetMode: 0
   abilityDescription: 'Unleash the fury of an ancient dragon lineage, exploding to
     deal 150% damage around you and applying dragon''s mark.
@@ -30,7 +30,7 @@ MonoBehaviour:
   abilityCost: 10
   movementLock: 1
   animationActivationPosition: 0.5
-  canMoveWhileCasting: 1
+  canMoveWhileCasting: 0
   hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0

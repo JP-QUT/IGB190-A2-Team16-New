@@ -24,7 +24,7 @@ MonoBehaviour:
     PASSIVE:
     Hitting a MARKED or BURNING enemy with this ability deals an additional 50% damage
     and heals you 5% of your max health for each enemy hit.'
-  abilityAnimation: Bow Shoot
+  abilityAnimation: Custom2
   range: 5
   castTime: 0
   abilityCooldown: 3
