@@ -25,7 +25,7 @@ MonoBehaviour:
     Hitting a MARKED or BURNING enemy with this ability deals an additional 50% damage
     and heals you 5% of your max health for each enemy hit.'
   abilityAnimation: Custom2
-  range: 5
+  range: 7
   castTime: 0
   abilityCooldown: 3
   abilityCost: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.8
+        value: 1
     - rid: 2915345718801596969
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
