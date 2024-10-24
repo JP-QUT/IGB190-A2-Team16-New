@@ -18,7 +18,7 @@ MonoBehaviour:
 
     The amulet of a legendary figure
     gone missing. You''ve heard countless tales and stories of them since you were
-    a child. Wearing it gives you a feeling of sorrow.'
+    a child. Wearing it gives you a feeling of grief.'
   randomStatCount: 0
   itemCost: 7000
   itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
@@ -43,6 +43,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

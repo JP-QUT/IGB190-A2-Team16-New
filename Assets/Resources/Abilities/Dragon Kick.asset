@@ -23,9 +23,9 @@ MonoBehaviour:
   range: 0
   castTime: 0.5
   abilityCooldown: 0.1
-  abilityCost: 5
+  abilityCost: 10
   movementLock: 1
-  animationActivationPosition: 0.8
+  animationActivationPosition: 0.95
   canMoveWhileCasting: 0
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 1
@@ -464,7 +464,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 4450316829855746748, guid: b72499fbc8394864290840a755465e3c, type: 3}
+        value: {fileID: 156460554333174876, guid: 450b39c41ce70d24b8993c4ec4e96da4, type: 3}
     - rid: 2915345699733242251
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -518,7 +518,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
+        value: 1
     - rid: 2915345744447931124
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

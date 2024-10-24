@@ -4409,7 +4409,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 2
   baseResourceRegen: 0
-  baseAttackRange: 1.5
+  baseAttackRange: 3
   abilities:
   - {fileID: 11400000, guid: 512c391659aaea7499881a21c58de6c0, type: 2}
   - {fileID: 11400000, guid: 4e9d2a7cd6952d84f9d8d77de87db60c, type: 2}
@@ -29584,34 +29584,34 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 128
   _monsterValues:
-    baseGoldDropAmountMinimum: 100
-    baseGoldDropAmountMaximum: 200
+    baseGoldDropAmountMinimum: 10
+    baseGoldDropAmountMaximum: 30
     goldDropChance: 0.2
-    unempoweredMonsterCommonDropChance: 0.2
+    unempoweredMonsterCommonDropChance: 0
     unempoweredMonsterRareDropChance: 0
     unempoweredMonsterLegendaryDropChance: 0
   _empoweredMonsterValues:
-    empoweredMonsterHealthModifier: 2
+    empoweredMonsterHealthModifier: 3
     empoweredMonsterDamageModifier: 2
     empoweredMonsterAttackSpeedModifier: 1
     empoweredMonsterXPModifier: 5
     empoweredMonsterGoldModifier: 3
     empoweredMonsterCommonDropChance: 1
     empoweredMonsterRareDropChance: 0.4
-    empoweredMonsterLegendaryDropChance: 0.1
+    empoweredMonsterLegendaryDropChance: 0
   _playerExperienceValues:
     baseMonsterXP: 10
     startingXPPerLevel: 50
     additionalMaxXPPerLevel: 100
   _monsterScalingValues:
-    increasedHealthPerPlayerLevel: 0.25
+    increasedHealthPerPlayerLevel: 0.35
     increasedDamagePerPlayerLevel: 0.25
   _healthGlobeValues:
-    baseHealthGlobeChance: 0.6
-    reducedChancePerExistingGlobe: 0.15
+    baseHealthGlobeChance: 0.4
+    reducedChancePerExistingGlobe: 0.2
     spawnRadius: 6
     lifetime: 30
-    healthGlobeHealthRestore: 100
+    healthGlobeHealthRestore: 50
   _inventoryValues:
     sellItemReturnRate: 0.25
   _armorValues:
