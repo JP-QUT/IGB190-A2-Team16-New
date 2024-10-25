@@ -17,7 +17,7 @@ MonoBehaviour:
 
 
     This looks like an ancient dragon soul encased in unknown
-    magic. Nothing happens when you put it on.'
+    magic. Why is this here?'
   randomStatCount: 0
   itemCost: 0
   itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}

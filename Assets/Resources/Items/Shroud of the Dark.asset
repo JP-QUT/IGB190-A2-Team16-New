@@ -19,7 +19,7 @@ MonoBehaviour:
     A cloak reinforced with a dark
     power. Wearing this occasionally makes you forget you have a body.'
   randomStatCount: 0
-  itemCost: 10000
+  itemCost: 1000
   itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
   itemType: 3
   itemRarity: 2
@@ -47,6 +47,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:
@@ -222,7 +224,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+        value: {fileID: 0}
     - rid: 2915345671546733567
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -261,7 +263,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+        value: {fileID: 0}
     - rid: 2915345672738439169
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:

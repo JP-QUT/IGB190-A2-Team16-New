@@ -21,7 +21,7 @@ MonoBehaviour:
     You''re not sure if the swords summoned by this blade are protecting you, or
     simply killing anything that stands in its path.'
   randomStatCount: 0
-  itemCost: 10000
+  itemCost: 1000
   itemIcon: {fileID: 21300000, guid: 39f7a15c239ed304bb4cbc5a51763d50, type: 3}
   itemType: 2
   itemRarity: 2

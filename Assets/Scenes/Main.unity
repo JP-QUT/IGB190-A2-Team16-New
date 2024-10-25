@@ -4404,7 +4404,7 @@ MonoBehaviour:
   baseMaxHealth: 400
   baseMaxResource: 100
   baseMovementSpeed: 4
-  baseArmor: 5
+  baseArmor: 10
   baseCriticalStrikeChance: 0.05
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 2
@@ -25565,7 +25565,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 960cb0df2d01e2f4893389bc4cebdddb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1cc4d976fcb79d54d882f5ebee54f951, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1687761267
 PrefabInstance:

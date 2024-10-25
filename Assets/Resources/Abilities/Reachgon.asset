@@ -58,7 +58,7 @@ MonoBehaviour:
           - rid: 2915345717653930758
           - rid: 2915345699733242223
           - rid: 2915345699733242224
-          - rid: 2915345718801596843
+          - rid: 2915345762712027429
         - scriptName: Unit Collision
           scriptUID: 1768056243
           hasWait: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 40
+        value: 30
     - rid: 2915345718801596681
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -613,61 +613,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 2915345718801596843
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SetProjectileLifetime
-        functionDescription: Projectile/Set Lifetime
-        functionDynamicDescription: Set max lifetime of $ to $
-        functionEvaluators:
-        - rid: 2915345718801596844
-        - rid: 2915345718801596845
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345718801596844
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345718801596845
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0.4
     - rid: 2915345719582785646
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1115,3 +1060,58 @@ MonoBehaviour:
         allowFunction: 0
         value: Burn
         options: []
+    - rid: 2915345762712027429
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetProjectileLifetime
+        functionDescription: Projectile/Set Lifetime
+        functionDynamicDescription: Set max lifetime of $ to $
+        functionEvaluators:
+        - rid: 2915345762712027430
+        - rid: 2915345762712027431
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Projectile
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345762712027430
+      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Last Created Projectile
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345762712027431
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.2

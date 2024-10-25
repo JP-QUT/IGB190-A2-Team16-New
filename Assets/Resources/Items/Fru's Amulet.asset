@@ -20,7 +20,7 @@ MonoBehaviour:
     gone missing. You''ve heard countless tales and stories of them since you were
     a child. Wearing it gives you a feeling of grief.'
   randomStatCount: 0
-  itemCost: 7000
+  itemCost: 700
   itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
   itemType: 1
   itemRarity: 2

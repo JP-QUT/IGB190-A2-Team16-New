@@ -21,7 +21,7 @@ MonoBehaviour:
     ability to drench the user''s clothes a deep scarlet from the opponent''s blood
     after a gruesome duel.'
   randomStatCount: 0
-  itemCost: 10000
+  itemCost: 1000
   itemIcon: {fileID: 21300000, guid: 39f7a15c239ed304bb4cbc5a51763d50, type: 3}
   itemType: 2
   itemRarity: 2
@@ -44,6 +44,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 5efef23f8f7c40b4e84a4015654fc638, type: 3}
   targetMode: 4
   abilityDescription: 'Dash towards the target location. An afterimage follows you,
-    dealing 50% attack damage along the way. You take 70% less damage while dashing.
+    dealing 50% attack damage along the way. You take 80% less damage while dashing.
 
 
     PASSIVE:
@@ -710,7 +710,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 70
+        value: 80
     - rid: 2915345717653930258
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -728,7 +728,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
+        value: 0.7
     - rid: 2915345717653930259
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1270,7 +1270,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.025
+        value: 0.05
     - rid: 2915345718801597048
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
