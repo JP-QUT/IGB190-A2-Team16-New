@@ -5007,15 +5007,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bdf33d91baf04a47a8388b13e49dda2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0724361
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bdf33d91baf04a47a8388b13e49dda2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2960715
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bdf33d91baf04a47a8388b13e49dda2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 146.9913
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bdf33d91baf04a47a8388b13e49dda2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5049,6 +5049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkinhulk L Shaw
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4bdf33d91baf04a47a8388b13e49dda2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7fc484527f7352a49a5990317e5de029, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
