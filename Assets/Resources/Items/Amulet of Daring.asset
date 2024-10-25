@@ -66,6 +66,8 @@ MonoBehaviour:
     minimum: 0.16
     maximum: 0.18
     isPercent: 1
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

@@ -10,41 +10,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Amulet
+  m_Name: ___
   m_EditorClassIdentifier: 
-  itemName: Amulet
-  itemDescription: 
+  itemName: ???
+  itemDescription: '???
+
+
+    This looks like an ancient dragon soul encased in unknown
+    magic. Nothing happens when you put it on.'
   randomStatCount: 0
   itemCost: 0
   itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
   itemType: 1
-  itemRarity: 0
+  itemRarity: 2
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1057175407
+      scriptUID: 595702536
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559491
+      - rid: 2915345759201919547
       conditionNodes: []
       actionNodes:
-      - rid: 2915345759201919549
+      - rid: 2915345759201919552
     - scriptName: Item Unequipped
-      scriptUID: 378403594
+      scriptUID: 963351369
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559492
+      - rid: 2915345759201919548
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
-  canPurchaseInShop: 1
-  canDropOffMonster: 1
+  canPurchaseInShop: 0
+  canDropOffMonster: 0
   references:
     version: 2
     RefIds:
-    - rid: 248813236419559491
+    - rid: 2915345759201919547
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -62,7 +66,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 248813236419559492
+    - rid: 2915345759201919548
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -80,7 +84,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345759201919549
+    - rid: 2915345759201919552
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -89,8 +93,8 @@ MonoBehaviour:
         functionDescription: UI/Show Tutorial Message
         functionDynamicDescription: Show a tutorial message printing $ for $ seconds
         functionEvaluators:
-        - rid: 2915345759201919550
-        - rid: 2915345759201919551
+        - rid: 2915345759201919553
+        - rid: 2915345759201919554
         presetName: 
         variableName: 
         stringSuffix: 
@@ -99,7 +103,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 2915345759201919550
+    - rid: 2915345759201919553
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -118,7 +122,7 @@ MonoBehaviour:
         allowFunction: 1
         value: ...
         options: []
-    - rid: 2915345759201919551
+    - rid: 2915345759201919554
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
