@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Blade of the Ruined King
   m_EditorClassIdentifier: 
   itemName: Blade of the Ruined King
-  itemDescription: 'Killing an enemy summons blades that spin for 3 seconds, dealing
-    20% attack damage.
+  itemDescription: 'Killing an enemy gives you for 5% of their max health and 1%
+    of their max health as attack for 5 seconds.
 
 
-    This blade gives off a bone-chilling turquoise glow.
-    You''re not sure if the swords summoned by this blade are protecting you, or
-    simply killing anything that stands in its path.'
+    This blade gives off a bone-chilling
+    turquoise glow. You''re not sure if the swords summoned by this blade are protecting
+    you, or simply killing anything that stands in its path.'
   randomStatCount: 0
   itemCost: 1000
   itemIcon: {fileID: 21300000, guid: 39f7a15c239ed304bb4cbc5a51763d50, type: 3}
@@ -35,12 +35,8 @@ MonoBehaviour:
       - rid: 2915345630333239500
       conditionNodes: []
       actionNodes:
-      - rid: 2915345744447930576
-      - rid: 2915345630333239372
-      - rid: 2915345744447930981
-      - rid: 2915345744447930928
-      - rid: 2915345744447930751
-      - rid: 2915345744447930796
+      - rid: 2915345762712027777
+      - rid: 2915345762712027784
     - scriptName: Item Unequipped
       scriptUID: 142582646
       hasWait: 0
@@ -48,22 +44,6 @@ MonoBehaviour:
       - rid: 2915345530357284885
       conditionNodes: []
       actionNodes: []
-    - scriptName: Projectile collision
-      scriptUID: 260101346
-      hasWait: 0
-      eventNodes:
-      - rid: 2915345744447930526
-      conditionNodes: []
-      actionNodes:
-      - rid: 2915345744447930527
-    - scriptName: Environ
-      scriptUID: 292041750
-      hasWait: 0
-      eventNodes:
-      - rid: 2915345744447930927
-      conditionNodes: []
-      actionNodes:
-      - rid: 2915345744447930925
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
@@ -108,83 +88,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345630333239372
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SpawnProjectileNew
-        functionDescription: Projectile/Spawn Projectile
-        functionDynamicDescription: Have $ spawn $ at $
-        functionEvaluators:
-        - rid: 2915345630333239373
-        - rid: 2915345630333239374
-        - rid: 2915345630333239375
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345630333239373
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: ClosestEnemyToPoint
-        functionDescription: Closest Enemy to Point
-        functionDynamicDescription: Closest enemy within $ of $
-        functionEvaluators:
-        - rid: 2915345744447930499
-        - rid: 2915345744447930500
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345630333239374
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Projectile
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 3592783735685221320, guid: dc5691ba49cf55840a55bdbb073432a2, type: 3}
-    - rid: 2915345630333239375
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: PositionOfUnit
-        functionDescription: Unit/Position of Unit
-        functionDynamicDescription: Position of $
-        functionEvaluators:
-        - rid: 2915345744447930978
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
     - rid: 2915345630333239500
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -209,76 +112,22 @@ MonoBehaviour:
         - Killing Unit
         - Killing Ability
         - Is Critical
-    - rid: 2915345744447930499
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: m
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 2915345744447930500
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 2915345744447930526
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ProjectileMadeByThisCollidesWithUnit
-        functionDescription: Projectile/Projectile collides with an enemy
-        functionDynamicDescription: 'Projectile from this object collides with an
-          enemy (Presets: <color=yellow>Event Projectile</color>, <color=yellow>Casting
-          Unit</color>, <color=yellow>Colliding Unit</color>)'
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Event Projectile
-        - Casting Unit
-        - Colliding Unit
-    - rid: 2915345744447930527
+    - rid: 2915345762712027777
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: HaveUnitDamageUnit2
-        functionDescription: Unit/Deal Damage to Unit
-        functionDynamicDescription: Deal $ attack damage to $
+        functionName: IncreaseStatValue
+        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Value
+        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
+          Stacks: $)'
         functionEvaluators:
-        - rid: 2915345744447930528
-        - rid: 2915345744447930529
+        - rid: 2915345762712027778
+        - rid: 2915345762712027779
+        - rid: 2915345762712027780
+        - rid: 2915345762712027781
+        - rid: 2915345762712027782
+        - rid: 2915345762712027783
         presetName: 
         variableName: 
         stringSuffix: 
@@ -287,81 +136,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 2915345744447930528
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: '%'
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 20
-    - rid: 2915345744447930529
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Colliding Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345744447930576
-      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DoActionsXTimesStoringVariable
-        functionDescription: Flow/For Loop
-        functionDynamicDescription: 'Do actions $ times (Variable Storing Current
-          Iteration: $)'
-        functionEvaluators:
-        - rid: 2915345744447930577
-        - rid: 2915345744447930578
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Loop
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345744447930577
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 2
-    - rid: 2915345744447930578
+    - rid: 2915345762712027778
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -376,302 +151,32 @@ MonoBehaviour:
         indent: 0
         nodeIcon: 
         allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: bork
-        options: []
-    - rid: 2915345744447930751
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: FaceProjectileTowardsPoint
-        functionDescription: Projectile/Face Projectile Towards Point
-        functionDynamicDescription: Face $ towards $
-        functionEvaluators:
-        - rid: 2915345744447930752
-        - rid: 2915345744447930753
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345744447930752
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345744447930753
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: PositionOfUnit
-        functionDescription: Unit/Position of Unit
-        functionDynamicDescription: Position of $
-        functionEvaluators:
-        - rid: 2915345744447930850
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 2915345744447930796
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: MoveForwardAtSpeed
-        functionDescription: Projectile/Move Projectile Forwards
-        functionDynamicDescription: Move $ forwards at $
-        functionEvaluators:
-        - rid: 2915345744447930797
-        - rid: 2915345744447930798
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345744447930797
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345744447930798
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: m/s
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 25
-    - rid: 2915345744447930850
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit
-        functionName: ClosestEnemyToPoint
-        functionDescription: Closest Enemy to Point
-        functionDynamicDescription: Closest enemy within $ of $
-        functionEvaluators:
-        - rid: 2915345744447930962
-        - rid: 2915345744447930963
-        presetName: Killed Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345744447930925
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DestroyProjectile
-        functionDescription: Projectile/Destroy Projectile
-        functionDynamicDescription: Destroy $
-        functionEvaluators:
-        - rid: 2915345744447930926
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345744447930926
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Event Projectile
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345744447930927
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ProjectileCollidesWithTerrain
-        functionDescription: Projectile/Projectile collides with terrain
-        functionDynamicDescription: 'Projectile from this object collides with the
-          terrain (Presets: <color=yellow>Event Projectile</color>, <color=yellow>Casting
-          Unit</color>)'
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Event Projectile
-        - Casting Unit
-    - rid: 2915345744447930928
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ seconds
-        functionEvaluators:
-        - rid: 2915345744447930929
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345744447930929
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0.3
-    - rid: 2915345744447930962
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: m
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 8
-    - rid: 2915345744447930963
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: PositionOfProjectile
-        functionDescription: Projectile/Position of Projectile
-        functionDynamicDescription: Position of $
-        functionEvaluators:
-        - rid: 2915345744447930964
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 2915345744447930964
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Projectile
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345744447930978
+        allowPreset: 0
+        allowFunction: 0
+        value: Max Health
+        options:
+        - Damage
+        - Armor
+        - Damage Taken
+        - Attack Speed
+        - Max Health
+        - Max Resource
+        - Movement Speed
+        - Cooldown Reduction
+        - Ability Cost Reduction
+        - Resource Generation
+        - Critical Chance
+        - Critical Damage
+    - rid: 2915345762712027779
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
         tempName: Unit
-        functionName: ClosestEnemyToPoint
-        functionDescription: Closest Enemy to Point
-        functionDynamicDescription: Closest enemy within $ of $
-        functionEvaluators:
-        - rid: 2915345744447930979
-        - rid: 2915345744447930980
-        presetName: Killed Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Item Owner
         variableName: 
         stringSuffix: 
         indent: 0
@@ -680,80 +185,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 2915345744447930979
+    - rid: 2915345762712027780
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 2
         tempName: Number
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: Multiplication
+        functionDescription: Math/Multiplication
+        functionDynamicDescription: $ x $
+        functionEvaluators:
+        - rid: 2915345762712027810
+        - rid: 2915345762712027811
         presetName: 
         variableName: 
-        stringSuffix: m
+        stringSuffix: 
         indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 2915345744447930980
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 2915345744447930981
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SetProjectileLifetime
-        functionDescription: Projectile/Set Lifetime
-        functionDynamicDescription: Set max lifetime of $ to $
-        functionEvaluators:
-        - rid: 2915345744447930982
-        - rid: 2915345744447930983
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345744447930982
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2915345744447930983
+    - rid: 2915345762712027781
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -770,4 +222,299 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 5
+    - rid: 2915345762712027782
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: None
+        options: []
+    - rid: 2915345762712027783
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 2915345762712027784
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: IncreaseStatValue
+        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Value
+        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
+          Stacks: $)'
+        functionEvaluators:
+        - rid: 2915345762712027785
+        - rid: 2915345762712027786
+        - rid: 2915345762712027787
+        - rid: 2915345762712027788
+        - rid: 2915345762712027789
+        - rid: 2915345762712027790
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345762712027785
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Damage
+        options:
+        - Damage
+        - Armor
+        - Damage Taken
+        - Attack Speed
+        - Max Health
+        - Max Resource
+        - Movement Speed
+        - Cooldown Reduction
+        - Ability Cost Reduction
+        - Resource Generation
+        - Critical Chance
+        - Critical Damage
+    - rid: 2915345762712027786
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Item Owner
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345762712027787
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Number
+        functionName: Multiplication
+        functionDescription: Math/Multiplication
+        functionDynamicDescription: $ x $
+        functionEvaluators:
+        - rid: 2915345762712027924
+        - rid: 2915345762712027925
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2915345762712027788
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 2915345762712027789
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: None
+        options: []
+    - rid: 2915345762712027790
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 2915345762712027810
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Number
+        functionName: UnitMaxHealth
+        functionDescription: Unit/Unit Max Health
+        functionDynamicDescription: $ Max Health
+        functionEvaluators:
+        - rid: 2915345762712027823
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2915345762712027811
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.05
+    - rid: 2915345762712027823
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Killed Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: c44049f9ec974654cb0a9885191e6b97, type: 3}
+    - rid: 2915345762712027924
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Number
+        functionName: UnitMaxHealth
+        functionDescription: Unit/Unit Max Health
+        functionDynamicDescription: $ Max Health
+        functionEvaluators:
+        - rid: 2915345762712027940
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2915345762712027925
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.01
+    - rid: 2915345762712027940
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Killed Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: c44049f9ec974654cb0a9885191e6b97, type: 3}

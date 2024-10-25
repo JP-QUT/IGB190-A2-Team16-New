@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ring of Eternity
   m_EditorClassIdentifier: 
   itemName: Ring of Eternity
-  itemDescription: 'Taking damage increases your armor by 5% for 10 seconds (Stacks
+  itemDescription: 'Taking damage increases your armor by 2 for 5 seconds (Stacks
     up to 10 times)
 
 
@@ -36,10 +36,10 @@ MonoBehaviour:
       eventNodes:
       - rid: 2915345530357284894
       - rid: 2915345762712027435
-      conditionNodes:
-      - rid: 2915345762712027432
+      conditionNodes: []
       actionNodes:
-      - rid: 2915345762712027436
+      - rid: 2915345762712027584
+      - rid: 2915345762712027625
     - scriptName: Item Unequipped
       scriptUID: 207181416
       hasWait: 0
@@ -50,8 +50,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 1
-    minimum: 0.25
-    maximum: 0.25
+    minimum: 0.1
+    maximum: 0.1
     isPercent: 1
   - stat: 4
     minimum: 0.5
@@ -67,16 +67,12 @@ MonoBehaviour:
     maximum: 75
     isPercent: 0
   - stat: 1
-    minimum: 0.15
-    maximum: 0.15
+    minimum: 0.1
+    maximum: 0.1
     isPercent: 1
   - stat: 4
-    minimum: 0.15
-    maximum: 0.15
-    isPercent: 1
-  - stat: 5
-    minimum: 0.15
-    maximum: 0.15
+    minimum: 0.2
+    maximum: 0.2
     isPercent: 1
   canPurchaseInShop: 1
   canDropOffMonster: 1
@@ -119,62 +115,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345762712027432
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitTypeMatch
-        functionDescription: Unit/Unit Matches Template
-        functionDynamicDescription: $ type matches $
-        functionEvaluators:
-        - rid: 2915345762712027433
-        - rid: 2915345762712027434
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 2915345762712027433
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Damaged Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 243147159722867909, guid: c44049f9ec974654cb0a9885191e6b97, type: 3}
-    - rid: 2915345762712027434
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 243147159722867909, guid: c44049f9ec974654cb0a9885191e6b97, type: 3}
     - rid: 2915345762712027435
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -200,31 +140,105 @@ MonoBehaviour:
         - Damaging Ability
         - Damage Dealt
         - Is Critical
-    - rid: 2915345762712027436
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+    - rid: 2915345762712027584
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: IncreaseStatPercent
-        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Percent
-        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
-          Stacks: $)'
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
         functionEvaluators:
-        - rid: 2915345762712027437
-        - rid: 2915345762712027438
-        - rid: 2915345762712027439
-        - rid: 2915345762712027440
-        - rid: 2915345762712027441
-        - rid: 2915345762712027442
+        - rid: 2915345762712027585
         presetName: 
         variableName: 
         stringSuffix: 
         indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345762712027585
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: UnitTypeMatch
+        functionDescription: Unit/Unit Matches Template
+        functionDynamicDescription: $ type matches $
+        functionEvaluators:
+        - rid: 2915345762712027620
+        - rid: 2915345762712027621
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2915345762712027620
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Damaged Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: c44049f9ec974654cb0a9885191e6b97, type: 3}
+    - rid: 2915345762712027621
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: c44049f9ec974654cb0a9885191e6b97, type: 3}
+    - rid: 2915345762712027625
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: IncreaseStatValue
+        functionDescription: Unit/Increase Stat/Increase Stat on Unit by Value
+        functionDynamicDescription: 'Increase $ of $ by $ for $ (Buff Name: $ | Max
+          Stacks: $)'
+        functionEvaluators:
+        - rid: 2915345762712027626
+        - rid: 2915345762712027627
+        - rid: 2915345762712027628
+        - rid: 2915345762712027629
+        - rid: 2915345762712027630
+        - rid: 2915345762712027631
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 1
         nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 2915345762712027437
+    - rid: 2915345762712027626
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -255,7 +269,7 @@ MonoBehaviour:
         - Resource Generation
         - Critical Chance
         - Critical Damage
-    - rid: 2915345762712027438
+    - rid: 2915345762712027627
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -273,25 +287,25 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 2915345762712027439
+    - rid: 2915345762712027628
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Percent
+        tempName: Number
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         presetName: 
         variableName: 
-        stringSuffix: '%'
+        stringSuffix: 
         indent: 0
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
         value: 5
-    - rid: 2915345762712027440
+    - rid: 2915345762712027629
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -308,8 +322,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
-    - rid: 2915345762712027441
+        value: 5
+    - rid: 2915345762712027630
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -328,7 +342,7 @@ MonoBehaviour:
         allowFunction: 1
         value: None
         options: []
-    - rid: 2915345762712027442
+    - rid: 2915345762712027631
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
