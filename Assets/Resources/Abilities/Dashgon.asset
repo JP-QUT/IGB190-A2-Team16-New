@@ -25,7 +25,7 @@ MonoBehaviour:
     Hitting a MARKED or BURNING enemy with this ability deals an additional 50% damage
     and heals you 5% of your max health for each enemy hit.'
   abilityAnimation: Custom2
-  range: 7
+  range: 5
   castTime: 0
   abilityCooldown: 3
   abilityCost: 0
@@ -76,8 +76,6 @@ MonoBehaviour:
           - rid: 2915345717653930390
           - rid: 2915345717653930264
           - rid: 2915345718801596969
-          - rid: 2915345720327274718
-          - rid: 2915345723249656169
         - scriptName: Terrain Collision
           scriptUID: 796542380
           hasWait: 0
@@ -1051,7 +1049,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 15
+        value: 20
     - rid: 2915345717653930756
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1178,7 +1176,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 1.5
     - rid: 2915345718801596969
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1291,62 +1289,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 2915345720327274718
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: RemoveBuff
-        functionDescription: Unit/Remove Buff
-        functionDynamicDescription: Remove buff named $ from $
-        functionEvaluators:
-        - rid: 2915345720327274719
-        - rid: 2915345720327274720
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345720327274719
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Text
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Burning
-        options: []
-    - rid: 2915345720327274720
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Colliding Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
     - rid: 2915345723249655914
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1461,59 +1403,3 @@ MonoBehaviour:
         allowFunction: 1
         value: Burning
         options: []
-    - rid: 2915345723249656169
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: RemoveBuff
-        functionDescription: Unit/Remove Buff
-        functionDynamicDescription: Remove buff named $ from $
-        functionEvaluators:
-        - rid: 2915345723249656170
-        - rid: 2915345723249656171
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 1
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345723249656170
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Text
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Mark
-        options: []
-    - rid: 2915345723249656171
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: Colliding Unit
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}

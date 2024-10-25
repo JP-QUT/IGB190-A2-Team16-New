@@ -24,18 +24,18 @@ MonoBehaviour:
     Burn:
     deals 5% attack damage every second for 5 seconds.'
   abilityAnimation: Bow Shoot
-  range: 6
-  castTime: 0.2
+  range: 5
+  castTime: 0
   abilityCooldown: 3
   abilityCost: 15
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
-  hasSpecificCastTime: 1
+  hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 1
   abilityGeneratesResource: 0
-  requiresLineOfSight: 1
-  canUpdateTargetWhileCasting: 1
+  requiresLineOfSight: 0
+  canUpdateTargetWhileCasting: 0
   castAtClosestPointInRange: 1
   castCompleteSound: {fileID: 8300000, guid: 9c616d1cee6aa6b40926b3725e8324e3, type: 3}
   castCompleteSoundVolume: 0.3
