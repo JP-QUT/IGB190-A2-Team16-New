@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Deadly Shield
   itemDescription: 
   randomStatCount: 0
-  itemCost: 0
+  itemCost: 300
   itemIcon: {fileID: 21300000, guid: 39f7a15c239ed304bb4cbc5a51763d50, type: 3}
   itemType: 2
   itemRarity: 1
@@ -38,6 +38,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats: []
   randomisableStats: []
+  canPurchaseInShop: 1
+  canDropOffMonster: 1
   references:
     version: 2
     RefIds:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blade of the Ruined King
   m_EditorClassIdentifier: 
   itemName: Blade of the Ruined King
-  itemDescription: 'Killing an enemy gives you for 5% of their max health and 1%
+  itemDescription: 'Killing an enemy gives you for 10% of their max health and 2%
     of their max health as attack for 5 seconds.
 
 
@@ -21,7 +21,7 @@ MonoBehaviour:
     turquoise glow. You''re not sure if the swords summoned by this blade are protecting
     you, or simply killing anything that stands in its path.'
   randomStatCount: 0
-  itemCost: 1000
+  itemCost: 700
   itemIcon: {fileID: 21300000, guid: 39f7a15c239ed304bb4cbc5a51763d50, type: 3}
   itemType: 2
   itemRarity: 2
@@ -35,6 +35,7 @@ MonoBehaviour:
       - rid: 2915345630333239500
       conditionNodes: []
       actionNodes:
+      - rid: 2915345792368377883
       - rid: 2915345762712027777
       - rid: 2915345762712027784
     - scriptName: Item Unequipped
@@ -45,7 +46,11 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
+  guaranteedStats:
+  - stat: 0
+    minimum: 0
+    maximum: 0
+    isPercent: 1
   randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1
@@ -176,7 +181,7 @@ MonoBehaviour:
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
-        presetName: Item Owner
+        presetName: Player
         variableName: 
         stringSuffix: 
         indent: 0
@@ -324,7 +329,7 @@ MonoBehaviour:
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
-        presetName: Item Owner
+        presetName: Player
         variableName: 
         stringSuffix: 
         indent: 0
@@ -444,7 +449,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.05
+        value: 0.1
     - rid: 2915345762712027823
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -499,7 +504,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.01
+        value: 0.02
     - rid: 2915345762712027940
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -518,3 +523,119 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 243147159722867909, guid: c44049f9ec974654cb0a9885191e6b97, type: 3}
+    - rid: 2915345792368377883
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SpawnEffectOnUnit
+        functionDescription: Feedback/Play Effect on Unit
+        functionDynamicDescription: $ $ effect on $ for $ at $ scale
+        functionEvaluators:
+        - rid: 2915345792368377884
+        - rid: 2915345792368377885
+        - rid: 2915345792368377886
+        - rid: 2915345792368377887
+        - rid: 2915345792368377888
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Effect
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345792368377884
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Play
+        options:
+        - Play
+        - Stop
+        - Play or Refresh
+    - rid: 2915345792368377885
+      type: {class: EffectNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Effect
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 1960674654432118277, guid: f8f540f1d74b5bd47aac925c43203e37, type: 3}
+    - rid: 2915345792368377886
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345792368377887
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 2915345792368377888
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: x
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1

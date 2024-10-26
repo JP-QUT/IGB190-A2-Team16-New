@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: RAWKET LAWNCHER!
+  m_Name: RAWKET LAUNCHER!
   m_EditorClassIdentifier: 
-  itemName: RAWKET LAWNCHER!
+  itemName: RAWKET LAUNCHER!
   itemDescription: '[SECRET WEAPON]
 
 
@@ -26,27 +26,26 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1019671845
+      scriptUID: 388424046
       hasWait: 0
       eventNodes:
-      - rid: 2915345530357284868
-      - rid: 2915345674892476450
+      - rid: 2915345792368377898
       conditionNodes: []
       actionNodes:
-      - rid: 2915345674892476759
-      - rid: 2915345674892476445
+      - rid: 2915345792368377903
+      - rid: 2915345792368377911
     - scriptName: Item Unequipped
-      scriptUID: 792869499
+      scriptUID: 794178267
       hasWait: 0
       eventNodes:
-      - rid: 2915345530357284869
+      - rid: 2915345792368377899
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
   guaranteedStats:
   - stat: 0
     minimum: 100
-    maximum: 0
+    maximum: 100
     isPercent: 0
   randomisableStats: []
   canPurchaseInShop: 0
@@ -54,7 +53,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2915345530357284868
+    - rid: 2915345792368377898
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -72,7 +71,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345530357284869
+    - rid: 2915345792368377899
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -90,7 +89,62 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345674892476445
+    - rid: 2915345792368377903
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 2915345792368377904
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345792368377904
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: PlayerHasItemEquipped
+        functionDescription: Player/Player Has Item Equipped
+        functionDynamicDescription: Player has $ equipped
+        functionEvaluators:
+        - rid: 2915345792368377910
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 2915345792368377910
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: This Item
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345792368377911
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -99,8 +153,8 @@ MonoBehaviour:
         functionDescription: Audio/Play Sound
         functionDynamicDescription: Play $ at $ volume
         functionEvaluators:
-        - rid: 2915345674892476446
-        - rid: 2915345674892476447
+        - rid: 2915345792368377912
+        - rid: 2915345792368377913
         presetName: 
         variableName: 
         stringSuffix: 
@@ -109,7 +163,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 2915345674892476446
+    - rid: 2915345792368377912
       type: {class: AudioNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -126,8 +180,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 8300000, guid: b6ea7c01985f8a5428db8f8368e616ce, type: 3}
-    - rid: 2915345674892476447
+        value: {fileID: 8300000, guid: cf775e5a8147e2e40b2aa483955ae523, type: 3}
+    - rid: 2915345792368377913
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -144,79 +198,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 40
-    - rid: 2915345674892476450
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: OnItemPickedUp
-        functionDescription: Player/Player picks up an item
-        functionDynamicDescription: 'When the player picks up an item (Presets: <color=yellow>Triggering
-          Item</color>)'
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Pickup
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Triggering Item
-    - rid: 2915345674892476759
-      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DoActionsIfBool
-        functionDescription: Flow/If Statement
-        functionDynamicDescription: Do actions if $
-        functionEvaluators:
-        - rid: 2915345674892476760
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345674892476760
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Bool
-        functionName: PlayerHasItemInInventory
-        functionDescription: Player/Player Has Item In Inventory
-        functionDynamicDescription: Player has $ in their inventory
-        functionEvaluators:
-        - rid: 2915345674892477131
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 2915345674892477131
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Item
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000}
+        value: 50
