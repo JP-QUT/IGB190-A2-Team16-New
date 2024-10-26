@@ -22,7 +22,7 @@ MonoBehaviour:
     after a gruesome duel.'
   randomStatCount: 0
   itemCost: 700
-  itemIcon: {fileID: 21300000, guid: 39f7a15c239ed304bb4cbc5a51763d50, type: 3}
+  itemIcon: {fileID: 21300000, guid: 99c7f26f596bb9745b21b358d139e668, type: 3}
   itemType: 2
   itemRarity: 2
   engine:
@@ -45,7 +45,11 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
+  guaranteedStats:
+  - stat: 0
+    minimum: 12
+    maximum: 12
+    isPercent: 0
   randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1

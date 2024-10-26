@@ -23,9 +23,9 @@ MonoBehaviour:
     Faint
     cries of a baby can be heard emenating from this amulet. You occasionally feel
     a sharp pain course through your stomach.'
-  randomStatCount: 0
+  randomStatCount: 2
   itemCost: 500
-  itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
+  itemIcon: {fileID: 21300000, guid: 650f1490561804c48908af065bc3d1df, type: 3}
   itemType: 1
   itemRarity: 2
   engine:
@@ -50,8 +50,24 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
-  randomisableStats: []
+  guaranteedStats:
+  - stat: 4
+    minimum: -100
+    maximum: -100
+    isPercent: 0
+  randomisableStats:
+  - stat: 0
+    minimum: 0.2
+    maximum: 0.2
+    isPercent: 1
+  - stat: 10
+    minimum: 0.1
+    maximum: 0.1
+    isPercent: 0
+  - stat: 11
+    minimum: 0.75
+    maximum: 0.75
+    isPercent: 0
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:

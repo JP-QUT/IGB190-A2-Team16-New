@@ -68,7 +68,7 @@ MonoBehaviour:
       - rid: 2915345759201919726
       - rid: 2915345759201919729
       - rid: 2915345759201919750
-      - rid: 2915345759201919747
+      - rid: 2915345792368378802
     - scriptName: cauteriz
       scriptUID: 210391627
       hasWait: 0
@@ -93,6 +93,8 @@ MonoBehaviour:
       - rid: 2915345762712027163
       - rid: 2915345762712027165
       - rid: 2915345762712027171
+      - rid: 2915345792368378808
+      - rid: 2915345792368378805
     - scriptName: fury
       scriptUID: 620275075
       hasWait: 0
@@ -103,6 +105,8 @@ MonoBehaviour:
       - rid: 2915345762712027164
       - rid: 2915345762712027168
       - rid: 2915345762712027174
+      - rid: 2915345792368378810
+      - rid: 2915345792368378812
     - scriptName: beforeboss
       scriptUID: 971301727
       hasWait: 0
@@ -1191,62 +1195,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 2915345759201919747
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ShowTutorialMessage
-        functionDescription: UI/Show Tutorial Message
-        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
-        functionEvaluators:
-        - rid: 2915345759201919748
-        - rid: 2915345759201919749
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: UI
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 2915345759201919748
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Text
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Right-click to use your 'Reachgon'
-        options: []
-    - rid: 2915345759201919749
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        indent: 0
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 3
     - rid: 2915345759201919750
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2234,7 +2182,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 200
+        value: 300
     - rid: 2915345762712027182
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -3512,7 +3460,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 4
     - rid: 2915345762712027489
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -3585,3 +3533,243 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 2915345792368378802
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 2915345792368378803
+        - rid: 2915345792368378804
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345792368378803
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: '"Light your enemies ablaze."'
+        options: []
+    - rid: 2915345792368378804
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
+    - rid: 2915345792368378805
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 2915345792368378806
+        - rid: 2915345792368378807
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345792368378806
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: '"Remember. We drain the lifeforce from our enemies."'
+        options: []
+    - rid: 2915345792368378807
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4
+    - rid: 2915345792368378808
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ seconds
+        functionEvaluators:
+        - rid: 2915345792368378809
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345792368378809
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4
+    - rid: 2915345792368378810
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ seconds
+        functionEvaluators:
+        - rid: 2915345792368378811
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345792368378811
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4
+    - rid: 2915345792368378812
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 2915345792368378813
+        - rid: 2915345792368378814
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345792368378813
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: '"Let our rage strike fear into the souls of your enemies."'
+        options: []
+    - rid: 2915345792368378814
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 4

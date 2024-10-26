@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Nightingale
   m_EditorClassIdentifier: 
   itemName: Nightingale
-  itemDescription: 'Using a movement ability increases your crit damage by 200% for
-    4 seconds.
+  itemDescription: 'Using a movement ability increases your critical damage by 200%
+    for 4 seconds.
 
 
     "Catch me if you can! Oh wait, you''re dead."
 
 
-    A pair of
-    boots from a notorious phantom killer. They were never caught because they''d
+    A pair
+    of boots from a notorious phantom killer. They were never caught because they''d
     somehow kill everyone who chased after them. '
   randomStatCount: 0
   itemCost: 500
@@ -47,7 +47,15 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
+  guaranteedStats:
+  - stat: 7
+    minimum: 0.05
+    maximum: 0.05
+    isPercent: 1
+  - stat: 6
+    minimum: 0.2
+    maximum: 0.2
+    isPercent: 1
   randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Blade of the Ruined King(old)
+  m_Name: delete later
   m_EditorClassIdentifier: 
-  itemName: Blade of the Ruined King(old)
+  itemName: delete later
   itemDescription: 'Killing an enemy gives you for 5% of their max health and 10%
     of their attack for 10 seconds.
 

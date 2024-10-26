@@ -10,40 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Cultist Robes
+  m_Name: Duelist's Sword
   m_EditorClassIdentifier: 
-  itemName: Cultist Robes
+  itemName: Duelist's Sword
   itemDescription: 
   randomStatCount: 0
-  itemCost: 250
-  itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
-  itemType: 3
+  itemCost: 300
+  itemIcon: {fileID: 21300000, guid: 3231897a319156d4a9fede4f76f720bd, type: 3}
+  itemType: 2
   itemRarity: 1
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1473456147
+      scriptUID: 1608555616
       hasWait: 0
       eventNodes:
-      - rid: 2915345530357284910
+      - rid: 2915345530357284882
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 827124688
+      scriptUID: 297883110
       hasWait: 0
       eventNodes:
-      - rid: 2915345530357284911
+      - rid: 2915345530357284883
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
+  guaranteedStats:
+  - stat: 0
+    minimum: 5
+    maximum: 7
+    isPercent: 0
+  - stat: 10
+    minimum: 0.05
+    maximum: 0.09
+    isPercent: 0
+  - stat: 11
+    minimum: 1
+    maximum: 1
+    isPercent: 0
   randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:
     version: 2
     RefIds:
-    - rid: 2915345530357284910
+    - rid: 2915345530357284882
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -61,7 +73,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 2915345530357284911
+    - rid: 2915345530357284883
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

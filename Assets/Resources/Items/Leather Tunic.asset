@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leather Tunic
   itemDescription: 
-  randomStatCount: 0
+  randomStatCount: 1
   itemCost: 80
-  itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
+  itemIcon: {fileID: 21300000, guid: c2a8abde6fd547746952a2a966a7c197, type: 3}
   itemType: 3
   itemRarity: 0
   engine:
@@ -36,20 +36,20 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats:
-  - stat: 1
-    minimum: 8
-    maximum: 10
+  guaranteedStats: []
+  randomisableStats:
+  - stat: 0
+    minimum: 4
+    maximum: 4
+    isPercent: 0
+  - stat: 4
+    minimum: 75
+    maximum: 75
     isPercent: 0
   - stat: 3
-    minimum: 0.22
-    maximum: 0.24
+    minimum: 0.05
+    maximum: 0.05
     isPercent: 1
-  - stat: 4
-    minimum: 120
-    maximum: 125
-    isPercent: 0
-  randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:

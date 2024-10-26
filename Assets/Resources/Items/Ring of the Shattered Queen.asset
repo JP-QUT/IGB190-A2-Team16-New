@@ -20,7 +20,7 @@ MonoBehaviour:
     on this ring. A shiver travels down your spine as you put on the ring.'
   randomStatCount: 2
   itemCost: 300
-  itemIcon: {fileID: 21300000, guid: 70429bf7d5f2bf341be1c31492f4ecd0, type: 3}
+  itemIcon: {fileID: 21300000, guid: 9b7d51c6722aaa642937efca16c894f9, type: 3}
   itemType: 0
   itemRarity: 2
   engine:
@@ -42,33 +42,25 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 7
-    minimum: 0.12
-    maximum: 0.12
+    minimum: 0.1
+    maximum: 0.1
     isPercent: 1
   - stat: 8
-    minimum: 0.24
-    maximum: 0.24
+    minimum: 0.25
+    maximum: 0.25
     isPercent: 1
   randomisableStats:
   - stat: 9
     minimum: 0.12
     maximum: 0.12
     isPercent: 1
-  - stat: 8
-    minimum: 0.18
-    maximum: 0.18
-    isPercent: 1
-  - stat: 7
-    minimum: 0.18
-    maximum: 0.18
+  - stat: 5
+    minimum: 0.2
+    maximum: 0.2
     isPercent: 1
   - stat: 5
-    minimum: 0.3
-    maximum: 0.3
-    isPercent: 1
-  - stat: 5
-    minimum: 120
-    maximum: 120
+    minimum: 50
+    maximum: 50
     isPercent: 0
   canPurchaseInShop: 1
   canDropOffMonster: 1

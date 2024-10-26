@@ -17,10 +17,10 @@ MonoBehaviour:
 
 
     This looks like an ancient dragon soul encased in unknown
-    magic. Why is this here?'
+    magic. It feels familiar. Why is this here?'
   randomStatCount: 0
   itemCost: 0
-  itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
+  itemIcon: {fileID: 21300000, guid: b9cd520922e35e14ca925156fe3e7357, type: 3}
   itemType: 1
   itemRarity: 2
   engine:

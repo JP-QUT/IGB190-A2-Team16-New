@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: 
   randomStatCount: 0
   itemCost: 200
-  itemIcon: {fileID: 21300000, guid: 87a6ace052badc94890297eb1f920c27, type: 3}
+  itemIcon: {fileID: 21300000, guid: e9620576e1fb27a44a1067a25da42233, type: 3}
   itemType: 4
   itemRarity: 1
   engine:
@@ -36,7 +36,19 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes: []
   template: {fileID: 0}
-  guaranteedStats: []
+  guaranteedStats:
+  - stat: 6
+    minimum: -0.08
+    maximum: -0.1
+    isPercent: 1
+  - stat: 1
+    minimum: 12
+    maximum: 14
+    isPercent: 0
+  - stat: 1
+    minimum: 0.06
+    maximum: 0.06
+    isPercent: 1
   randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1

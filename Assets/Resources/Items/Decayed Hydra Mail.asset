@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Decayed Hydra Mail 1
+  m_Name: Decayed Hydra Mail
   m_EditorClassIdentifier: 
   itemName: Decayed Hydra Mail
-  itemDescription: 'Taking damage gives you 50% temporary max health for 5 seconds.
+  itemDescription: 'Taking damage gives you 80% temporary max health for 5 seconds.
 
 
     "This
@@ -25,7 +25,7 @@ MonoBehaviour:
     feel your wounds closing faster than usual.'
   randomStatCount: 2
   itemCost: 600
-  itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
+  itemIcon: {fileID: 21300000, guid: a003f2a8e52d6af418181716d7f46846, type: 3}
   itemType: 3
   itemRarity: 2
   engine:
@@ -48,15 +48,19 @@ MonoBehaviour:
       actionNodes: []
   template: {fileID: 0}
   guaranteedStats:
+  - stat: 4
+    minimum: 0.3
+    maximum: 0.3
+    isPercent: 1
+  randomisableStats:
   - stat: 1
-    minimum: 0
-    maximum: 0
+    minimum: 20
+    maximum: 20
     isPercent: 0
   - stat: 1
-    minimum: 0
-    maximum: 0
+    minimum: 0.15
+    maximum: 0.15
     isPercent: 1
-  randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:
@@ -213,7 +217,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 50
+        value: 80
     - rid: 2915345792368378312
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

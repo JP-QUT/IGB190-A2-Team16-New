@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wooden Charm
   itemDescription: 
-  randomStatCount: 0
+  randomStatCount: 1
   itemCost: 70
-  itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
+  itemIcon: {fileID: 21300000, guid: 181b5fdeed6d08942b5976f78b43f8d9, type: 3}
   itemType: 1
   itemRarity: 0
   engine:
@@ -37,19 +37,19 @@ MonoBehaviour:
       actionNodes: []
   template: {fileID: 0}
   guaranteedStats:
+  - stat: 8
+    minimum: 0.03
+    maximum: 0.06
+    isPercent: 1
+  randomisableStats:
   - stat: 9
-    minimum: 0.06
+    minimum: 0.08
     maximum: 0.08
     isPercent: 1
   - stat: 7
-    minimum: 0.05
+    minimum: 0.06
     maximum: 0.06
     isPercent: 1
-  - stat: 8
-    minimum: 0.05
-    maximum: 0.06
-    isPercent: 1
-  randomisableStats: []
   canPurchaseInShop: 1
   canDropOffMonster: 1
   references:

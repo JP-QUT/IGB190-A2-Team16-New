@@ -44,8 +44,8 @@ MonoBehaviour:
   template: {fileID: 0}
   guaranteedStats:
   - stat: 0
-    minimum: 100
-    maximum: 100
+    minimum: 30
+    maximum: 30
     isPercent: 0
   randomisableStats: []
   canPurchaseInShop: 0
