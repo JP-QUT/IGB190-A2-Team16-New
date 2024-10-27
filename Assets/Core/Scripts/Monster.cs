@@ -49,6 +49,9 @@ public class Monster : Unit
     // Cached components
     protected AudioSource source;
 
+    //setup for damage sfx
+    [SerializeField] private AudioClip[] damageSoundClipsM;
+
     /// <summary>
     /// Performs all initial monster setup.
     /// </summary>
@@ -201,6 +204,9 @@ public class Monster : Unit
             Color color = isCritical ? CritDamageTextColor : HitDamageTextColor;
             float scale = isCritical ? CriticalDamageNumberScaleMod : 1.0f;
             StatusMessageUI.Spawn(spawnPos, Mathf.Max(0, Mathf.Round(amount)).ToString(), color, scale);
+
+            //play sound fx
+            SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClipsM, transform, 1f);
         }
     }
 
