@@ -5025,6 +5025,11 @@ MonoBehaviour:
   uiHeight: 1.7
   spawnLevel: 2
   spawnLikelihood: 5
+  damageSoundClipsM:
+  - {fileID: 8300000, guid: 4d94cfd042c31704b95887090d589211, type: 3}
+  - {fileID: 8300000, guid: 699fcb53fc82b874082c3a852e64251a, type: 3}
+  - {fileID: 8300000, guid: 01d0c17e369996c48a76a73a0cd6cc52, type: 3}
+
 --- !u!54 &5473502248093228870
 Rigidbody:
   m_ObjectHideFlags: 0
