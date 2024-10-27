@@ -25,6 +25,7 @@ MonoBehaviour:
       - rid: 4184214666226172889
       - rid: 4184214666226172890
       - rid: 4184214666226172891
+      - rid: 2915345805448315105
   references:
     version: 2
     RefIds:
@@ -64,6 +65,42 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
+    - rid: 2915345805448315105
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShakeScreen
+        functionDescription: Feedback/Shake Screen
+        functionDynamicDescription: Shake the screen with a strength of $
+        functionEvaluators:
+        - rid: 2915345805448315106
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Effect
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345805448315106
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
     - rid: 4184214666226172887
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -234,7 +271,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Explore the Temple
+        value: Kill the Dungeon Master
         options: []
     - rid: 4184214666413867032
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}

@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/CharacterSelect.unity
-    guid: 630090f9bede6554b94254e000794664
   - enabled: 1
     path: Assets/Scenes/Home Screen.unity
     guid: bd1cd08c449385d40bc2cbfbbc042b00
@@ -19,7 +16,7 @@ EditorBuildSettings:
     guid: 50683ae83f4452d489b7b5005e8dafef
   - enabled: 1
     path: Assets/Scenes/Main.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: 72ec7aadf247514469bbfef224c05220
   - enabled: 1
     path: Assets/Scenes/Epilogue.unity
     guid: 9dee88900a2937b46afb33f50887599b
