@@ -22,7 +22,7 @@ MonoBehaviour:
 
 
     Burn:
-    deals 5% attack damage every second for 5 seconds.'
+    deals 10% attack damage every second for 5 seconds.'
   abilityAnimation: Bow Shoot
   range: 5
   castTime: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 10
     - rid: 2915345718801596688
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

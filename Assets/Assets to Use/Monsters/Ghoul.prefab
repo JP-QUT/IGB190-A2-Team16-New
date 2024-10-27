@@ -154,7 +154,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 2
   spawnLevel: 1
-  spawnLikelihood: 5
+  spawnLikelihood: 2
 --- !u!82 &3180178508269611153
 AudioSource:
   m_ObjectHideFlags: 0

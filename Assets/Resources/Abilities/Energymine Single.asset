@@ -17,10 +17,10 @@ MonoBehaviour:
   abilityName: Energymine Single
   abilityIcon: {fileID: 21300000, guid: 9b6c65a006c95c14da84b561b06b3dec, type: 3}
   targetMode: 4
-  abilityDescription: Summon ball of energy randomly around you, dealing 20% attack
+  abilityDescription: Summon ball of energy randomly around you, dealing 100% attack
     damage to the enemies that touches it.
   abilityAnimation: Bow Shoot
-  range: 5
+  range: 10
   castTime: 1
   abilityCooldown: 5
   abilityCost: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
+        value: 30
     - rid: 2915345745271849361
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -386,7 +386,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 20
+        value: 100
     - rid: 2915345745271849362
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

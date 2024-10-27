@@ -20,7 +20,7 @@ MonoBehaviour:
   abilityDescription: Summon balls of energy randomly around you, dealing 20% attack
     damage to the enemies that touches it.
   abilityAnimation: Bow Shoot
-  range: 5
+  range: 10
   castTime: 0.1
   abilityCooldown: 30
   abilityCost: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 6
+        value: 10
     - rid: 2915345745271849328
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -548,7 +548,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
+        value: 15
     - rid: 2915345745271849329
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

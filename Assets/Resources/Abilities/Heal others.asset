@@ -1,0 +1,282 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
+  m_Name: Heal others
+  m_EditorClassIdentifier: 
+  engine:
+    rid: 2915345796320723580
+  abilityName: Heal others
+  abilityIcon: {fileID: 21300000, guid: fe8e6a489e2efde4fa02ee13706a2edf, type: 3}
+  targetMode: 0
+  abilityDescription: regen other enemies
+  abilityAnimation: Shout
+  range: 999
+  castTime: 2
+  abilityCooldown: 5
+  abilityCost: 0
+  movementLock: 1
+  animationActivationPosition: 0.5
+  canMoveWhileCasting: 0
+  hasSpecificCastTime: 1
+  cooldownIsAtackSpeed: 0
+  abilityGeneratesResource: 0
+  requiresLineOfSight: 1
+  canUpdateTargetWhileCasting: 1
+  castAtClosestPointInRange: 0
+  castCompleteSound: {fileID: 0}
+  castCompleteSoundVolume: 1
+  needsReminderFlash: 0
+  isUnlocked: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 2915345796320723580
+      type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
+      data:
+        scripts:
+        - scriptName: Cast Completed
+          scriptUID: 1291999415
+          hasWait: 0
+          eventNodes:
+          - rid: 2915345796320723581
+          conditionNodes: []
+          actionNodes:
+          - rid: 2915345796320723728
+          - rid: 2915345796320723746
+    - rid: 2915345796320723581
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitFinishesCastingThisAbility
+        functionDescription: Ability/When a unit finishes casting this ability
+        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
+          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
+          <color=yellow>Target Unit</color>)'
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Casting Unit
+        - Ability Target Location
+        - Target Unit
+    - rid: 2915345796320723728
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetUnitGroupVariable
+        functionDescription: Variables/Set Unit Group
+        functionDynamicDescription: Set Unit Group named $ to $
+        functionEvaluators:
+        - rid: 2915345796320723729
+        - rid: 2915345796320723730
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345796320723729
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Targets
+        options: []
+    - rid: 2915345796320723730
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfPoint
+        functionDescription: Alls Enemies Near Point
+        functionDynamicDescription: All enemies of $ within $ of $
+        functionEvaluators:
+        - rid: 2915345796320723731
+        - rid: 2915345796320723732
+        - rid: 2915345796320723733
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345796320723731
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345796320723732
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Number
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
+    - rid: 2915345796320723733
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Location
+        functionName: PositionOfProjectile
+        functionDescription: Projectile/Position of Projectile
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 2915345796320723734
+        presetName: Goal Position
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 2915345796320723734
+      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Projectile
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: Event Projectile
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2915345796320723746
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: HaveUnitDamageUnits2
+        functionDescription: Unit/Deal Damage to Unit Group
+        functionDynamicDescription: Deal $ attack damage to $
+        functionEvaluators:
+        - rid: 2915345796320723747
+        - rid: 2915345796320723748
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345796320723747
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: -100
+    - rid: 2915345796320723748
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: GetUnitGroupVariable
+        functionDescription: Unit Group Variable
+        functionDynamicDescription: 'Unit Group: $'
+        functionEvaluators:
+        - rid: 2915345796320723793
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2915345796320723793
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        indent: 0
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Targets
+        options: []
